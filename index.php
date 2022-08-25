@@ -27,10 +27,10 @@ require 'db_conn.php';
                     <form action="app/add.php" method="POST" autocomplete="off">
                         <?php if(isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
                             <input type="text" placeholder="This Field Is Required" name="title"  >
-                            <button class="btn" @click="addTodo()">Add</button>
+                            <button class="btn" >Add</button>
                         <?php  } else{ ?>
                             <input type="text" placeholder="New Task" name="title" >
-                            <button class="btn" @click="addTodo()">Add</button>
+                            <button class="btn" >Add</button>
                         <?php }?>
                     </form>
                 </div>
@@ -52,20 +52,16 @@ require 'db_conn.php';
                         <?php if($todo['checked']){ ?>
                             <input type="checkbox"  class="check-box" checked data-todo-id="<?php echo $todo['id']; ?>" >
                             <span><h4 class="checked"><?php echo $todo['title']  ?></h4></span>
-                               
-                                
-                                <span class="note">
-                                    <small><?php echo $todo['data_time']  ?> </small>
-                                    <i class="fas fa-solid fa-pen"></i>
-                                </span>  
+                            <span class="note">
+                                <small><?php echo $todo['data_time']  ?> </small>
+                            </span>  
                             
                         <?php }else { ?>
                             <input type="checkbox" class="check-box" data-todo-id="<?php echo $todo['id']; ?>" >  
                             <span><h4 ><?php echo $todo['title']  ?></h4></span>
-                                <span class="note">
-                                    <small><?php echo $todo['data_time']  ?> </small>
-                                    <i class="fas fa-solid fa-pen"></i>
-                                </span>  
+                            <span class="note">
+                                <small><?php echo $todo['data_time']  ?> </small>
+                            </span>  
                         
                         <?php }?> 
                         </li>                          
@@ -73,15 +69,8 @@ require 'db_conn.php';
                     <?php }?>
                     
                 </ul>
-                
-
             </main>
-
-
-
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <!-- <script src="js/script.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
@@ -115,10 +104,8 @@ require 'db_conn.php';
                         };
                     }
                     )
-                })
+                });
             });
-                
-           
         </script>
     </body>
 </html>
