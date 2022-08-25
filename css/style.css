@@ -26,11 +26,16 @@ input{
     margin-right: 20px;
     text-align: center;
 }
+.check-box{
+    
+    margin-top:8px;
+}
 .btn{
     padding: 10px 14px;
     border-radius: 20px;
     background-color: rgb(240, 200, 207);
     font-weight: 700;
+    cursor: pointer;
 }
 li{
     list-style: none;
@@ -44,9 +49,25 @@ li{
 ul{
     margin-top: 50px;
 }
-.fa-chevron-circle-down{
+small{
+    font-size: 12px;
+    line-height: 28px;
+}
+.icon{
     padding: 0 10px;
     color: darkmagenta;
+}
+.checked{
+    color:gray;
+}
+.fas{
+    padding: 0 10px;
+    color: darkmagenta;
+    
+}
+
+.remove-to-do :only-child{
+    display:none;
 }
 i{
     cursor: pointer;
@@ -55,4 +76,8 @@ h3{
     color: darkmagenta;
     margin-top: 70px;
     border-bottom: 1px solid darkgrey;
+}
+.done{
+    color: white;
+
 }
